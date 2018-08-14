@@ -1,2 +1,2 @@
 Port: 4200
-Container Download Path: /opt/SMLoadr/DOWNLOADS
+Container Download Path: /etc/s6.d/gotty/DOWNLOADS/
