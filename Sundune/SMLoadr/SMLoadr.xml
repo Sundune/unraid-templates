@@ -17,7 +17,7 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
   <Icon>https://github.com/Sundune/unraid-templates/blob/master/Logo/SMLoadr.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1534275823</DateInstalled>
+  <DateInstalled>1534276554</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Download Music from Deezer&#xD;
@@ -25,16 +25,23 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
 Disclaimer: Inform yourself if you are allowed to Download from Deezer in your area. I am not responsable for how you use it.</Description>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>4200</HostPort>
+        <ContainerPort>4200</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/Scripts/SMLoadrOutput</HostDir>
+      <HostDir/>
       <ContainerDir>/etc/s6.d/gotty/DOWNLOADS/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Music Download Folder" Target="/etc/s6.d/gotty/DOWNLOADS/" Default="" Mode="rw" Description="Folder where SMLoadr will store your music" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Scripts/SMLoadrOutput</Config>
+  <Config Name="Music Download Folder" Target="/etc/s6.d/gotty/DOWNLOADS/" Default="" Mode="rw" Description="Folder where SMLoadr will store your music" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="WebUI" Target="4200" Default="" Mode="tcp" Description="Container Port: 4200" Type="Port" Display="always" Required="true" Mask="false">4200</Config>
 </Container>
