@@ -12,12 +12,12 @@
 &#xD;
 Disclaimer: Inform yourself if you are allowed to Download from Deezer in your area. I am not responsable for how you use it.</Overview>
   <Category>Downloaders: MediaApp:Music</Category>
-  <WebUI>4200</WebUI>
+  <WebUI>http://[IP]:[PORT:4200]</WebUI>
   <TemplateURL/>
   <Icon>https://github.com/Sundune/unraid-templates/blob/master/Logo/SMLoadr.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1534274510</DateInstalled>
+  <DateInstalled>1534275823</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Download Music from Deezer&#xD;
@@ -29,12 +29,12 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
   </Networking>
   <Data>
     <Volume>
-      <HostDir/>
+      <HostDir>/mnt/user/Scripts/SMLoadrOutput</HostDir>
       <ContainerDir>/etc/s6.d/gotty/DOWNLOADS/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Music Download Folder" Target="/etc/s6.d/gotty/DOWNLOADS/" Default="" Mode="rw" Description="Folder where SMLoadr will store your music" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Music Download Folder" Target="/etc/s6.d/gotty/DOWNLOADS/" Default="" Mode="rw" Description="Folder where SMLoadr will store your music" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Scripts/SMLoadrOutput</Config>
 </Container>
