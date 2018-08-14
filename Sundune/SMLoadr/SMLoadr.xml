@@ -14,7 +14,7 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
   <Category>Downloaders: MediaApp:Music</Category>
   <WebUI>http://[IP]:[PORT:4200]</WebUI>
   <TemplateURL/>
-  <Icon>https://github.com/Sundune/unraid-templates/blob/master/Logo/SMLoadr.png</Icon>
+  <Icon>https://github.com/Sundune/unraid-templates/raw/master/Logo/SMLoadr.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <DateInstalled>1534276554</DateInstalled>
