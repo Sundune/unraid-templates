@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/sundune/docker-templates/sundune/smloadr.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Downloaders:</Category>
+  <Name>SMLoadr</Name>
+  <Description>
+    Download Music from Deezer using SMLoadr.
+  </Description>
+  <Overview>
+    Download Music from Deezer using SMLoadr.
+  </Overview>
+  <Support>https://github.com/Sundune/unraid-templates</Support>
+  <GitHub>https://github.com/Sundune/unraid-templates</GitHub>
+  <Repository>sundune/smloadr</Repository>
+  <Project>https://git.fuwafuwa.moe/SMLoadrDev/SMLoadr</Project>
+  <Deprecated>true</Deprecated>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4200</HostPort>
+        <ContainerPort>4200</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Music</HostDir>
+      <ContainerDir>/opt/SMLoadr/Download</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:4200]/</WebUI>
+  <Banner></Banner>
+  <Icon></Icon>
+  <ExtraParams></ExtraParams>
+</Containers>
