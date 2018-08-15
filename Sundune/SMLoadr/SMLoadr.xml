@@ -17,7 +17,7 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
   <Icon>https://github.com/Sundune/unraid-templates/raw/master/Logo/SMLoadr.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1534357997</DateInstalled>
+  <DateInstalled>1534361848</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Download Music from Deezer&#xD;
@@ -35,13 +35,13 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/Scripts/SMLoadrOutput/</HostDir>
+      <HostDir/>
       <ContainerDir>/etc/s6.d/gotty/DOWNLOADS/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/SMLoadr/SMLoadrConfig.json</HostDir>
-      <ContainerDir>/etc/s6.d/gotty/SMLoadrConfig.json</ContainerDir>
+      <HostDir>/mnt/user/appdata/SMLoadr/SMLoadr.log</HostDir>
+      <ContainerDir>/etc/s6.d/gotty/SMLoadr.log</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
@@ -50,16 +50,16 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/SMLoadr/SMLoadr.log</HostDir>
-      <ContainerDir>/etc/s6.d/gotty/SMLoadr.log</ContainerDir>
+      <HostDir>/mnt/user/appdata/SMLoadr/SMLoadrConfig.json</HostDir>
+      <ContainerDir>/etc/s6.d/gotty/SMLoadrConfig.json</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Music Download Folder" Target="/etc/s6.d/gotty/DOWNLOADS/" Default="" Mode="rw" Description="Folder where SMLoadr will store your music" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Scripts/SMLoadrOutput/</Config>
+  <Config Name="Music Download Folder" Target="/etc/s6.d/gotty/DOWNLOADS/" Default="/mnt/user/Scripts/SMLoadrOutput/" Mode="rw" Description="Folder where SMLoadr will store your music" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="WebUI" Target="4200" Default="" Mode="tcp" Description="Container Port: 4200" Type="Port" Display="always" Required="true" Mask="false">4200</Config>
-  <Config Name="SMLoadr Config location" Target="/etc/s6.d/gotty/SMLoadrConfig.json" Default="" Mode="rw" Description="Save location for the SMLoadr Config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/SMLoadr/SMLoadrConfig.json</Config>
-  <Config Name="Bulk Download File location" Target="/etc/s6.d/gotty/downloadLinks.txt" Default="" Mode="rw" Description="Text file for Bulk Downloading" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/SMLoadr/downloadLinks.txt</Config>
-  <Config Name="Logfile Location" Target="/etc/s6.d/gotty/SMLoadr.log" Default="" Mode="rw" Description="Container Path: /etc/s6.d/gotty/SMLoadr.log" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/SMLoadr/SMLoadr.log</Config>
+  <Config Name="Logfile Location" Target="/etc/s6.d/gotty/SMLoadr.log" Default="/mnt/user/appdata/SMLoadr/SMLoadr.log" Mode="rw" Description="Container Path: /etc/s6.d/gotty/SMLoadr.log" Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/SMLoadr/SMLoadr.log</Config>
+  <Config Name="Bulk Download File location" Target="/etc/s6.d/gotty/downloadLinks.txt" Default="/mnt/user/appdata/SMLoadr/downloadLinks.txt" Mode="rw" Description="Text file for Bulk Downloading" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/SMLoadr/downloadLinks.txt</Config>
+  <Config Name="SMLoadr Config location" Target="/etc/s6.d/gotty/SMLoadrConfig.json" Default="/mnt/user/appdata/SMLoadr/SMLoadrConfig.json" Mode="rw" Description="Save location for the SMLoadr Config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/SMLoadr/SMLoadrConfig.json</Config>
 </Container>
