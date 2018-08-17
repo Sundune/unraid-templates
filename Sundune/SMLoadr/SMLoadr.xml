@@ -17,7 +17,7 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
   <Icon>https://github.com/Sundune/unraid-templates/raw/master/Logo/SMLoadr.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1534422415</DateInstalled>
+  <DateInstalled>1534490248</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Download Music from Deezer&#xD;
@@ -36,7 +36,7 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
   <Data>
     <Volume>
       <HostDir/>
-      <ContainerDir>/etc/s6.d/gotty/DOWNLOADS/</ContainerDir>
+      <ContainerDir>/Download</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
@@ -47,7 +47,7 @@ Disclaimer: Inform yourself if you are allowed to Download from Deezer in your a
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Music Download Folder" Target="/etc/s6.d/gotty/DOWNLOADS/" Default="/mnt/user/Music" Mode="rw" Description="Folder where SMLoadr will store your music" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Music Download Folder" Target="/Download" Default="/mnt/user/Music" Mode="rw" Description="Folder where SMLoadr will store your music" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="WebUI" Target="4200" Default="" Mode="tcp" Description="Container Port: 4200" Type="Port" Display="always" Required="true" Mask="false">4200</Config>
   <Config Name="SMLoadr Config location" Target="/etc/s6.d/gotty/" Default="/mnt/user/appdata/SMLoadr/" Mode="rw" Description="Save location for the SMLoadr Config Files" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/SMLoadr/</Config>
 </Container>
